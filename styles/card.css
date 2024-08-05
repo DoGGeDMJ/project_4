@@ -1,0 +1,90 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 188px;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: #181818;
+  transition: all 0.3s;
+  text-decoration: none;
+  position: relative;
+}
+
+.card:hover {
+  background-color: #282828;
+  cursor: pointer;
+}
+
+.card:hover .image {
+  transform: scale(0.8);
+  transition: all 0.5s;
+}
+
+.card:hover .image img {
+  border-radius: 4px;
+}
+
+.card:hover .image .play-icon {
+  opacity: 1;
+  bottom: 10px;
+  transform: scale(1.4);
+}
+
+.card .image {
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  position: relative;
+  /* transition: all 0.5s; */
+}
+
+.card .image img {
+  width: 156px;
+  height: 156px;
+  object-fit: cover;
+  z-index: 1;
+  transition: border-radius 0.5s;
+  border-radius: 50%;
+}
+
+.card .image .play-icon {
+  transition: bottom 0.5s, opacity 0.3s, transform 0.5s;
+  /* transition - changing the speed  */
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgb(215, 104, 30);
+  color: black;
+  z-index: 2;
+  opacity: 0;
+  bottom: 0;
+  left: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  padding-left: 4px;
+}
+
+.card .info {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+.card .info .name {
+  color: #fff;
+  font-size: 16px;
+  line-height: 25.6px;
+  font-weight: 700;
+  padding-bottom: 4px;
+}
+
+.card .info .desc {
+  color: rgb(167, 167, 167);
+  font-size: 14px;
+  line-height: 22.4px;
+  font-weight: 400;
+}
